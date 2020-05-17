@@ -1,0 +1,33 @@
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+        input {
+            padding: .5rem;
+        }
+        textarea {
+            padding: .5rem;
+            height: 250px;
+            grid-column: 1 / span 2;
+            font-size: 1.4rem;
+        }
+}
+
+#contact {
+    padding: 4rem 0;
+    background: $dark-color;
+    color: $light-color;
+    
+    .contact {
+        &-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+        }
+
+        &-info > i {
+            font-size: 3rem;
+        }
+    }
+}

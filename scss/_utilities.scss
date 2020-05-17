@@ -1,0 +1,87 @@
+// Nav-bar-border
+
+#background {
+    border-bottom: 3px solid $primary-color;
+}
+
+// ---------------------------Button------------------------------
+
+%btn-shared {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    
+    @include transition(all 0.2s ease);
+}
+
+.btn {
+    @extend %btn-shared;
+    padding: 1rem 2rem;
+
+    &-light {
+        background-color: $light-color;
+        color: $dark-color;
+        
+        &:hover {
+            background-color: darken($light-color, 10%);
+        }
+    }
+
+    
+
+    &-dark {
+        background-color: $dark-color;
+        color: $light-color;
+
+        &:hover {
+            background-color: lighten($dark-color, 10%);
+        }
+    }
+}
+
+// ----------------------------Container---------------------
+
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section {
+
+    &-title {
+        font-size: 2rem;
+        display: inline-block;
+    }
+
+    &-content {
+        font-size: 1.4rem;
+    }
+
+    &-title::after {
+        content: '';
+        border-bottom: 2px solid $primary-color;
+        display: block;
+        margin: 1rem auto;
+        width: 50px;
+    }
+
+}
+
+li {
+    list-style: none;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-stack;
+ 
+}

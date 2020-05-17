@@ -1,0 +1,57 @@
+//------------------------------Achievement---------------------
+
+#section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#specialize {
+    display: flex;
+    padding: 3rem 0;
+}
+
+.feature {
+    &-title {
+        padding: .5rem 0;
+    }
+
+    &-content {
+        line-height: 1.6rem;
+    }
+}
+
+.feature > i {
+    font-size: 2rem;
+    color: $primary-color;
+}
+
+.achievement {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    &-count:nth-child(odd) {
+        background-color: $light-color;
+    }
+
+    &-count:nth-child(even) {
+        background-color: rgba(165, 165, 165, 0.616);
+        color: $dark-color;
+    }
+
+    &-count {
+        padding: 4rem 0;
+    }
+
+    &-count > i {
+        font-size: 3.5rem;
+    }
+
+    &-count > h3 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    &-count > p {
+        font-size: 2rem;
+    }
+}

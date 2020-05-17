@@ -1,0 +1,45 @@
+#footer {
+    background-color: rgb(32, 32, 32);
+    color: $light-color;
+    padding: 1rem;
+    
+    .footer {
+        &-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .social ul {
+        display: flex;
+        
+        & li {
+            margin: 0 1rem;
+            text-align: center;
+            
+            & a {
+                color: $light-color;
+                
+                
+                .iconify {
+                    border-radius: 50%;
+                    padding: .5rem;
+                    font-size: 1.5rem;
+                    border: 2px solid $light-color;
+                    @include transition(background-color 0.2s ease);
+
+                    &:hover {
+                        background-color: $primary-color;
+                        cursor: pointer;
+                    }
+            }
+
+        }
+    }
+
+
+    }
+
+
+}

@@ -1,0 +1,103 @@
+@import 'effect';
+@import 'config';
+@import 'utilities';
+@import 'section-2';
+@import 'section-process';
+@import 'footer';
+@import 'about';
+@import 'work';
+@import 'contact';
+
+
+#home-header {
+    background: url(/dist/assets/showcase.jpg) no-repeat center center/cover;
+    height: 100vh;
+}
+
+// --------------- Nav-bar -----------------
+
+#menu {
+    width: 100%;
+
+}
+
+// Menu------------hover------------effect
+
+.menu {
+    &-logo {
+        width: 80px;
+    } 
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        ul {
+            display: flex;
+            
+            a::after {
+                content: '';
+                border-bottom: 2px solid $light-color;
+                display: block;
+                margin-top: 5px;
+                
+                transform: scaleX(0);
+                transition: transform 0.25s ease-in-out;
+            }
+
+            a:hover::after {
+                transform: scaleX(1);
+            }
+            
+
+            li a {
+                @extend %btn-shared;
+            
+                padding: 0 1rem;
+                font-size: 1rem;
+                color: $light-color;
+
+                &.current::after {
+                    border-bottom: 2px solid $primary-color;
+                    transform: scaleX(1);
+                }
+            }
+        }
+
+    }
+
+}
+// --------------- Header -----------------
+
+.showcase {
+    &-container > h1 {
+        font-size: 3rem;
+        color: $light-color;
+    }
+
+    &-container > p {
+        margin-bottom: 3rem;
+        color: $light-color;
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 20%;
+    }
+}
+
+
+ 
+
+
+
+
+
+
+
+
